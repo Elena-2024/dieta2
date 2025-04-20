@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Dietas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Dietas</h1>
+
+    <h2>Datos personales</h2>
+    <label>Peso (kg): <input type="number" id="peso" /></label>
+    <label>Altura (cm): <input type="number" id="altura" /></label>
+    <label>Edad: <input type="number" id="edad" /></label>
+    <label>Sexo:
+      <select id="sexo">
+        <option value="hombre">Hombre</option>
+        <option value="mujer">Mujer</option>
+      </select>
+    </label>
+    <label>Actividad física:
+      <select id="actividad">
+        <option value="1.2">Sedentario</option>
+        <option value="1.375">Ligero</option>
+        <option value="1.55">Moderado</option>
+        <option value="1.725">Activo</option>
+        <option value="1.9">Muy activo</option>
+      </select>
+    </label>
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="resultados"></div>
+
+    <h2>Lista de alimentos</h2>
+    <input type="text" id="alimento" placeholder="Ej: Manzana 52" />
+    <button onclick="agregarAlimento()">Agregar</button>
+    <ul id="listaAlimentos"></ul>
+    <p>Total de calorías: <span id="totalCalorias">0</span> kcal</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
